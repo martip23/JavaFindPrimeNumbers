@@ -16,7 +16,7 @@ public class PrimeFinder {
 		// TODO primeCalculator STUB
 		System.out.println("primeCalculator called on "
 				+ n + "!");
-		int[] dummyList = {0};
+		int[] dummyList = {n};
 		return dummyList;
 	}
 

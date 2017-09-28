@@ -17,19 +17,22 @@ public class TestDriver {
 		int input = DEFAULT_SIZE;
 		
 		// IO Operations
-		System.out.print("Enter the upper limit for the prime finder "
-				+ "(Default " + DEFAULT_SIZE + "):");
 		
-		try {
-			Scanner sc = new Scanner (System.in);
-			input = sc.nextInt();
-			sc.close();
+		if (args == null) {
+			System.out.print("Enter the upper limit for the prime finder "
+					+ "(Default " + DEFAULT_SIZE + "):");
+			
+			try {
+				Scanner sc = new Scanner (System.in);
+				input = sc.nextInt();
+				sc.close();
+			}
+			catch(Exception ex) {
+				System.out.println("Error on input block!");
+				System.out.println("Setting input to default " + DEFAULT_SIZE
+						+ "!");
+			}
 		}
-		catch(Exception ex) {
-			System.out.println("Error on input block!");
-			System.out.println("Setting input to default " + DEFAULT_SIZE
-					+ "!");
-		};	
 		
 		PrimeFinder.primeCalculator(input);
 	}
