@@ -34,7 +34,12 @@ public class TestDriver {
 			}
 		}
 		
-		System.out.println(PrimeFinder.primeCalculator(input));
+		boolean[] primeList = PrimeFinder.primeCalculator(input);
+		
+		System.out.println("Primes: ");
+		for (int i = 0; i < primeList.length; i++)
+			if (primeList[i])
+				System.out.print(i + " ");		
 	}
 
 }
