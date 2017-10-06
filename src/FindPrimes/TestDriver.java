@@ -17,7 +17,7 @@ public class TestDriver {
 		int input = DEFAULT_SIZE;
 		
 		// IO Operations
-		
+	
 		if (args.length == 0 || args == null) {
 			System.out.print("Enter the upper limit for the prime finder "
 					+ "(Default " + DEFAULT_SIZE + "):");
@@ -36,7 +36,7 @@ public class TestDriver {
 		
 		boolean[] primeList = PrimeFinder.primeCalculator(input);
 		
-		System.out.println("Primes: ");
+		System.out.print("Primes: ");
 		for (int i = 0; i < primeList.length; i++)
 			if (primeList[i])
 				System.out.print(i + " ");		

@@ -1,6 +1,6 @@
 package FindPrimes;
 
-import java.util.ArrayList;
+import java.lang.Math;
 
 /**
  * Class to hold the primeFinder function.
@@ -21,14 +21,14 @@ public class PrimeFinder {
 		// Creating array of integers.
 		boolean[] boolList = new boolean[n+1];
 		
-		// Set odd numbers and 2 to true
+		// 2 and odd numbers up to true
 		boolList[2] = true;
 		for (int i = 3; i < n; i += 2)
 			boolList[i] = true;
 		
-		for (int i = 3; i < n; i++) {
+		for (int i = 3; i < Math.sqrt(n); i++) {
 			if (boolList[i]) {
-				for (int j = i*i; j < n; j++) {
+				for (int j = i*i, k = 1; j < n; j+=k*i, k++) {
 					if (boolList[j] && (j % i == 0)) {
 						boolList[j] = false;
 					}
