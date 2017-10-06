@@ -1,11 +1,11 @@
 package FindPrimes;
 
 import java.util.Scanner; // For INPUT operations.
+import java.io.*;
 
 /**
  * Program to test the class PrimeFinder
  * @author Patrick Martinez
- *
  */
 public class TestDriver {
 
@@ -31,6 +31,18 @@ public class TestDriver {
 				System.out.println("Error on input block!");
 				System.out.println("Setting input to default " + DEFAULT_SIZE
 						+ "!");
+			}
+		}
+		
+		else {
+			String filename = args[0];
+			
+			try {
+				FileReader filereader = new FileReader(filename);
+				
+			}
+			catch() {
+				
 			}
 		}
 		
