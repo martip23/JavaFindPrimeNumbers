@@ -18,6 +18,7 @@ public class TestDriver {
 		
 		// IO Operations
 	
+		// No arguments
 		if (args.length == 0 || args == null) {
 			System.out.print("Enter the upper limit for the prime finder "
 					+ "(Default " + DEFAULT_SIZE + "):");
@@ -34,24 +35,33 @@ public class TestDriver {
 			}
 		}
 		
+		// Filename in arguments
 		else {
 			String filename = args[0];
+			String line;
 			
 			try {
-				FileReader filereader = new FileReader(filename);
-				
-			}
-			catch() {
+				File inputFile = new File(filename);
+				Scanner sc = new Scanner(inputFile);
+				input = sc.nextInt();
+				System.out.println(args[0]);
+				}
+			catch(Exception ex) {
 				
 			}
 		}
+	primePrint(input);
+		
+	}
+	
+	public static void primePrint (int input) {
 		
 		boolean[] primeList = PrimeFinder.primeCalculator(input);
 		
 		System.out.print("Primes: ");
-		for (int i = 0; i < primeList.length; i++)
+		for (int i = 2; i < primeList.length; i++)
 			if (primeList[i])
-				System.out.print(i + " ");		
+				System.out.print(i + " ");			
 	}
 
 }

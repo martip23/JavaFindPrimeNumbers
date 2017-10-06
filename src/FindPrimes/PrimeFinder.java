@@ -26,6 +26,7 @@ public class PrimeFinder {
 		for (int i = 3; i < n; i += 2)
 			boolList[i] = true;
 		
+		// Sieve magic
 		for (int i = 3; i < Math.sqrt(n); i++) {
 			if (boolList[i]) {
 				for (int j = i*i, k = 1; j < n; j+=k*i, k++) {
