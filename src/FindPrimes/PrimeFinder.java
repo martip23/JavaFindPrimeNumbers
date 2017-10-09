@@ -29,15 +29,11 @@ public class PrimeFinder {
 		// Sieve magic
 		for (int i = 3; i < Math.sqrt(n); i++) {
 			if (boolList[i]) {
-				for (int j = i*i, k = 1; j < n; j+=k*i, k++) {
+				for (int j = i*i; j < n; j += i) {
 						boolList[j] = false;
 				}
 			}
 		}
-		
 		return boolList;
 	}
-	
-	
-
 }

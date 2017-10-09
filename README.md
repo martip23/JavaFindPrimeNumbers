@@ -1,7 +1,9 @@
 # JavaFindPrimeNumbers
 <!---[![Build Status](https://travis-ci.org/martip23/JavaBinarySearchTree.svg?branch=master)](https://travis-ci.org/martip23/JavaBinarySearchTree)
 --->
-A program to find the prime numbers up to a given value N. Uses Sieve of Eratosthenes
+A program to find the prime numbers up to a given value N. Uses Sieve of Eratosthenes.
+![Class Diagram](/classDiagram/Class-Diagram.jpg)
+
 
 ## Getting Started
 These instructions will help you get a copy of the project up and running on your local machine.

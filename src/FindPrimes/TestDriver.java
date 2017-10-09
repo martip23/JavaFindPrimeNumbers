@@ -51,6 +51,7 @@ public class TestDriver {
 				File inputFile = new File(filename);
 				Scanner sc = new Scanner(inputFile);
 				input = sc.nextInt();
+				sc.close();
 
 				
 				// Run primeFinder and make string
@@ -80,7 +81,7 @@ public class TestDriver {
 	}
 	
 	/**
-	 * Returns a string containing only prime ints.
+	 * Returns a string containing only prime numbers.
 	 * @param input upper limit for primeCalculator
 	 * @return Returns a string of prime numbers up to limit n
 	 */
