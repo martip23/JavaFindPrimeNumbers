@@ -30,9 +30,7 @@ public class PrimeFinder {
 		for (int i = 3; i < Math.sqrt(n); i++) {
 			if (boolList[i]) {
 				for (int j = i*i, k = 1; j < n; j+=k*i, k++) {
-					if (boolList[j] && (j % i == 0)) {
 						boolList[j] = false;
-					}
 				}
 			}
 		}

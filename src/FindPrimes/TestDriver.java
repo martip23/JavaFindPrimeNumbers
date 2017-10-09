@@ -51,7 +51,7 @@ public class TestDriver {
 				File inputFile = new File(filename);
 				Scanner sc = new Scanner(inputFile);
 				input = sc.nextInt();
-				sc.close();
+
 				
 				// Run primeFinder and make string
 				boolean[] primeList = PrimeFinder.primeCalculator(input);
@@ -63,8 +63,8 @@ public class TestDriver {
 				outFile.close();
 				primePrint(primeString);
 				}
-			catch(Exception ex) {
-				System.out.println("EXCEPTION CAUGHT");
+			catch(FileNotFoundException e) {
+				System.out.println("File not found! Check that file is in project subdirectory (eclipse) or in the same folder.");
 			}
 		}		
 	}
